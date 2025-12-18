@@ -1,0 +1,72 @@
+@import "react-datepicker/dist/react-datepicker.css";
+
+.search-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+
+  select {
+    background: white;
+    color: black;
+    border-radius: 6px;
+    height: 35px;
+    border: 1px solid #dfe3eb;
+    padding: 0 16px;
+  }
+
+  .search-form-date-picker {
+    background: white;
+    color: black;
+    border-radius: 6px;
+    height: 35px;
+    border: 1px solid #dfe3eb;
+    padding: 0 16px;
+    width: 170px; // slightly wider for range text
+  }
+
+  button {
+    height: 35px;
+    padding: 0 16px;
+    border-radius: 6px;
+    border: 1px solid #2f6df6;
+    background: white;
+    color: #2f6df6;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .react-datepicker__close-icon {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+
+  .react-datepicker__close-icon::after {
+    background-color: transparent;
+    color: #8a94a6;
+    font-size: 18px;
+  }
+
+  .react-datepicker__close-icon:hover::after {
+    color: #2f6df6;
+  }
+
+  /* Make sure input has room for the X */
+  .search-form-date-picker {
+    padding-right: 34px !important;
+  }
+}
