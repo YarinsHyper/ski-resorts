@@ -62,7 +62,7 @@ const HotelResults: React.FC<HotelResultsProps> = ({
                     </div>
 
                     <div className="hotel-card__provider">
-                    📍 {destinations[hotel.ski_site].name}
+                      📍 {destinations[hotel.ski_site].name}
                     </div>
                   </div>
                 </div>

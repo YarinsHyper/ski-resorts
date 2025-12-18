@@ -70,9 +70,15 @@
 }
 
 /* Optional: make the three fields feel like the screenshot widths */
-.nav-bar__search .search-form .field--destination { min-width: 220px; }
-.nav-bar__search .search-form .field--people { min-width: 140px; }
-.nav-bar__search .search-form .field--dates { min-width: 220px; }
+.nav-bar__search .search-form .field--destination {
+  min-width: 220px;
+}
+.nav-bar__search .search-form .field--people {
+  min-width: 140px;
+}
+.nav-bar__search .search-form .field--dates {
+  min-width: 220px;
+}
 
 /* Responsive: stack on small screens */
 @media (max-width: 820px) {

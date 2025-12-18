@@ -1,11 +1,12 @@
 import "./nav-bar.scss";
 import React from "react";
 import WeSkiLogo from "../weski-logo/weski-logo";
-import SearchForm, { SearchData } from "../search-form/search-form";
 import { searchHotelsWithRoomSizes } from "../../api/hotel.api";
 import { HotelSearchQuery } from "../../types/hotel.types";
 import { formatDate } from "../../utils/format.util";
 import { NavBarProps } from "../../types/NavBar.types";
+import { SearchData } from "../../types/Search.types";
+import SearchForm from "../search-form/search-form";
 
 const NavBar: React.FC<NavBarProps> = ({
   setHotels,

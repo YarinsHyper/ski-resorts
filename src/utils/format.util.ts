@@ -25,3 +25,11 @@ export const getMainImageUrl = (hotel: Hotel): string | undefined => {
 
   return main?.url;
 };
+
+export function toYmd(date: Date): string {
+  // local date to yyyy-mm-dd (no timezone shift)
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
