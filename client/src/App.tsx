@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import HotelResults from "./components/hotel-results/hotel-results";
 import "./App.css";
 import { Hotel } from "./types/hotel.types";
 import NavBar from "./components/navbar/nav-bar";
 
-const App: React.FC = () => {
+const App = () => {
   const [hotels, setHotels] = useState<Hotel[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string>();

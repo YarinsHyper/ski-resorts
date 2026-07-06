@@ -2,7 +2,7 @@ import Select from "../../select/select";
 import destinations from "../../../data/destinations.json";
 import { ResortsSelectProps } from "../../../types/ResortSelect.types";
 
-const ResortsSelect: React.FC<ResortsSelectProps> = ({ onChange, value }) => {
+const ResortsSelect = ({ onChange, value }: ResortsSelectProps) => {
   return (
     <Select
       onChange={(resortId) => onChange(Number(resortId))}

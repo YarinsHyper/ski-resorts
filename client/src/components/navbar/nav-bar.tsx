@@ -1,5 +1,4 @@
 import "./nav-bar.scss";
-import React from "react";
 import WeSkiLogo from "../weski-logo/weski-logo";
 import { searchHotelsWithRoomSizes } from "../../api/hotel.api";
 import { HotelSearchQuery } from "../../types/hotel.types";
@@ -8,12 +7,12 @@ import { NavBarProps } from "../../types/NavBar.types";
 import { SearchData } from "../../types/Search.types";
 import SearchForm from "../search-form/search-form";
 
-const NavBar: React.FC<NavBarProps> = ({
+const NavBar = ({
   setHotels,
   setError,
   setIsLoading,
   isLoading,
-}) => {
+}: NavBarProps) => {
   const handleSearch = async (data: SearchData) => {
     setIsLoading(true);
     setError(undefined);
