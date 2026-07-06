@@ -2,7 +2,7 @@ import { GuestSelectProps } from "../../../types/GuestSelect.types";
 import Select from "../../select/select";
 import "./guests-select.scss";
 
-const GuestsSelect: React.FC<GuestSelectProps> = ({ onChange, value }) => {
+const GuestsSelect = ({ onChange, value }: GuestSelectProps) => {
   return (
     <Select
       onChange={(groupSize) => onChange(Number(groupSize))}

@@ -1,6 +1,4 @@
-import React from "react";
-
-const WeSkiLogo: React.FC = () => {
+const WeSkiLogo = () => {
   return (
     <img
       width={130}

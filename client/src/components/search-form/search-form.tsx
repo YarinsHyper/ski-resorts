@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import destinations from "../../data/destinations.json";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -6,7 +6,7 @@ import "./search-form.scss";
 import { toYmd } from "../../utils/format.util";
 import { SearchData, SearchProps } from "../../types/Search.types";
 
-const SearchForm: React.FC<SearchProps> = ({ onSearch, isLoading }) => {
+const SearchForm = ({ onSearch, isLoading }: SearchProps) => {
   const [formData, setFormData] = useState<SearchData>({
     destination: 1,
     groupSize: 2,

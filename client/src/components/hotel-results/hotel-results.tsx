@@ -1,4 +1,3 @@
-import React from "react";
 import { Hotel } from "../../types/hotel.types";
 import "./hotel-results.css";
 import destinations from "../../data/destinations.json";
@@ -10,11 +9,11 @@ interface HotelResultsProps {
   error?: string;
 }
 
-const HotelResults: React.FC<HotelResultsProps> = ({
+const HotelResults = ({
   hotels,
   isLoading,
   error,
-}) => {
+}: HotelResultsProps) => {
   if (error) return <div className="hr-state hr-state--error">{error}</div>;
   if (isLoading) return <div className="hr-state">Searching hotels…</div>;
   if (!hotels.length) return <div className="hr-state">No hotels found.</div>;
