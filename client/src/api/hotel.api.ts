@@ -1,6 +1,6 @@
 import { HotelSearchQuery, Hotel } from "../types/hotel.types";
 
-const BASE_API_URL = "http://localhost:9000";
+const BASE_API_URL = process.env.REACT_APP_API_URL || "http://localhost:9000";
 
 export const searchHotels = async (
   query: HotelSearchQuery
