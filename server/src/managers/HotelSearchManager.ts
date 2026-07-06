@@ -1,5 +1,6 @@
 import { ApiProvider, Hotel, HotelSearchResult, SearchQuery } from "../types";
 import { ProviderRegistry } from "../providers/ProviderRegistry";
+import { generateFallbackHotels } from "../utils/mockHotels";
 
 export class HotelSearchManager {
   private registry: ProviderRegistry;
@@ -21,21 +22,22 @@ export class HotelSearchManager {
   }
 
   private async fetchFromAllProviders(query: SearchQuery): Promise<Hotel[]> {
-    const allPromises: Promise<Hotel[]>[] = [];
-    const providers = this.registry.getAllProviders();
+    // const allPromises: Promise<Hotel[]>[] = [];
+    // const providers = this.registry.getAllProviders();
 
-    for (const provider of providers) {
-      allPromises.push(provider.search(query));
-    }
+    // for (const provider of providers) {
+    //   allPromises.push(provider.search(query));
+    // }
 
-    const results = await Promise.allSettled(allPromises);
+    // const results = await Promise.allSettled(allPromises);
 
-    const hotels: Hotel[] = [];
-    for (const result of results) {
-      if (result.status === "fulfilled") {
-        hotels.push(...result.value);
-      }
-    }
+    // const hotels: Hotel[] = [];
+    // for (const result of results) {
+    //   if (result.status === "fulfilled") {
+    //     hotels.push(...result.value);
+    //   }
+    // }
+    const hotels: Hotel[] = generateFallbackHotels(query);
 
     return hotels;
   }

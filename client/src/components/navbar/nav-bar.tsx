@@ -22,7 +22,7 @@ const NavBar = ({
         ski_site: Number(data.destination),
         from_date: formatDate(data.startDate),
         to_date: formatDate(data.endDate),
-        group_size: data.groupSize,
+      group_size: data.groupSize,
       };
 
       const results = await searchHotelsWithRoomSizes(query);
