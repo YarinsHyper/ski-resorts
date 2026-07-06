@@ -19,7 +19,8 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "react",
-      "react-dom"
+      "react-dom",
+      "node"
     ]
   },
   "include": [
