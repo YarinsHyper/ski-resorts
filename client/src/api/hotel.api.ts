@@ -6,6 +6,7 @@ export const searchHotels = async (
   query: HotelSearchQuery
 ): Promise<Hotel[]> => {
   try {
+    console.log( process.env)
     const response = await fetch(`${BASE_API_URL}/api/hotels/search`, {
       method: "POST",
       headers: {

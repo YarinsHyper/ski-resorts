@@ -40,7 +40,7 @@ jobs:
       - name: Build
         env:
           PUBLIC_URL: /ski-resorts
-          REACT_APP_API_URL: ${{ vars.REACT_APP_API_URL }}
+          REACT_APP_API_URL: https://ski-resorts-5lgt.onrender.com
         run: npm run build 
 
       - name: Setup Pages
